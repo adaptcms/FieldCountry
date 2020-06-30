@@ -2,6 +2,7 @@
 
 namespace Adaptcms\FieldCountry\Field;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 use Adaptcms\Fields\FieldType;
@@ -111,11 +112,12 @@ class FieldCountry extends FieldType
   /**
   * With Form Meta
   *
-  * @param ModuleField $moduleField
+  * @param \Illuminate\Http\Request $request
+  * @param ModuleField              $moduleField
   *
   * @return array
   */
-  // public function withFormMeta(ModuleField $moduleField)
+  // public function withFormMeta($request, ModuleField $moduleField)
   // {
   //   $meta = [];
   //
@@ -139,26 +141,40 @@ class FieldCountry extends FieldType
   * After Model Store
   *
   * @param Model       $model
-  * @param array       $formData
+  * @param Request     $request
   * @param ModuleField $moduleField
   *
   * @return void
   */
-  // public function afterModelStore($model, array $formData, ModuleField $moduleField)
+  // public function afterModelStore($model, Request $request, ModuleField $moduleField)
   // {
-  //
+  //   $this->afterModelSave($model, $request, $moduleField);
   // }
 
   /**
   * After Model Update
   *
   * @param Model       $model
-  * @param array       $formData
+  * @param Request     $request
   * @param ModuleField $moduleField
   *
   * @return void
   */
-  // public function afterModelUpdate($model, array $formData, ModuleField $moduleField)
+  // public function afterModelUpdate($model, Request $request, ModuleField $moduleField)
+  // {
+  //   $this->afterModelSave($model, $request, $moduleField);
+  // }
+
+  /**
+  * After Model Save
+  *
+  * @param Model       $model
+  * @param Request     $request
+  * @param ModuleField $moduleField
+  *
+  * @return void
+  */
+  // public function afterModelSave($model, Request $request, ModuleField $moduleField)
   // {
   //
   // }
