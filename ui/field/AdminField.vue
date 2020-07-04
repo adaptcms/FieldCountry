@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import get from 'lodash.get'
+import { get } from 'lodash'
 import SelectField from '@/Adaptcms/Base/ui/components/Form/SelectField'
 import CountriesList from '@/Adaptcms/FieldCountry/countries.json'
 
@@ -30,7 +30,6 @@ export default {
     'errors',
     'formMeta',
     'model',
-    'module',
     'action'
   ],
 
